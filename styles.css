@@ -1,0 +1,46 @@
+* {
+	background-color: darkgray;
+}
+nav {
+	display: flex;
+	justify-content: flex-end;
+}
+h1 {
+	text-align: center;
+	font-family: monospace;
+}
+.wrapper {
+	display: flex;
+	border: solid;
+	border-color: red;
+	justify-content: center;
+	align-items: center;
+	font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+}
+.button-panel {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	justify-content: center;
+	border: solid;
+	border-color: greenyellow;
+	min-width: 40%;
+	min-height: 400px;
+	font-size: larger;
+}
+button {
+	font-size: large;
+	border-radius: 10%;
+	background-color: black;
+	color: rgb(226, 226, 226);
+    min-width: 100px;
+}
+.display {
+	border: solid;
+	border-color: seagreen;
+	min-width: 40%;
+	min-height: 400px;
+}
+footer {
+	text-align: center;
+}

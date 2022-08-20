@@ -37,8 +37,8 @@ button {
 }
 .display {
 	display: grid;
-	width: 500px;
-	height: 500px;
+	width: 800px;
+	height: 800px;
 }
 footer {
 	text-align: center;

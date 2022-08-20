@@ -4,7 +4,8 @@ function generateDisplay(size) {
 	display.style.gridTemplateRows = `repeat(${size}, 1fr)`;
 	let squares = display.querySelectorAll("div");
 	squares.forEach((div) => div.remove());
-	for (let i = 0; i < 256; i++) {
+	let canvasSize = size * size;
+	for (let i = 0; i < canvasSize; i++) {
 		let square = document.createElement("div");
 
 		square.addEventListener("mouseover", () => {
@@ -16,9 +17,12 @@ function generateDisplay(size) {
 	}
 }
 generateDisplay(16);
+let range = document.getElementById("myRange").value;
+
 let clearBtn = document.querySelector(".clearBtn");
 clearBtn.addEventListener("click", () => {
-	generateDisplay(16);
+	generateDisplay(32);
+	console.log(range);
 });
 let colorBtn = document.querySelector(".colorBtn");
 colorBtn.addEventListener("click", () => {
@@ -28,3 +32,5 @@ let eraserBtn = document.querySelector(".eraserBtn");
 eraserBtn.addEventListener("click", () => {
 	console.log("This works");
 });
+
+function chooseColor(color) {}

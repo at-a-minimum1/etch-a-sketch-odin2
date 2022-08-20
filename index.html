@@ -8,18 +8,22 @@
 		<title>Etch-A-Sketch</title>
 	</head>
 	<body>
-		<nav>About</nav>
 		<h1>Etch-A-Sketch</h1>
 		<div class="wrapper">
 			<div class="button-panel">
 				<button class="clearBtn">Clear</button> <br />
 				<button class="colorBtn">Color</button> <br />
 				<button class="eraserBtn">Eraser</button><br />
-				Grid Size <br />
+				Grid Size 
+				<!-- <div class="slider-value">slideContainer.value</div> -->
+				<br />
+				<div class="slider-container">
+					<input type="range" id="myRange" min="1" max="50" value="16" />
+				</div>
 			</div>
 			<div class="display"></div>
 		</div>
 		<footer>Timbo -2022</footer>
-        <script src="app.js"></script>
+		<script src="app.js"></script>
 	</body>
 </html>

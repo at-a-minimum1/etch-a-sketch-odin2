@@ -33,13 +33,12 @@ button {
 	border-radius: 10%;
 	background-color: black;
 	color: rgb(226, 226, 226);
-    min-width: 100px;
+	min-width: 100px;
 }
 .display {
-	border: solid;
-	border-color: seagreen;
-	min-width: 40%;
-	min-height: 400px;
+	display: grid;
+	width: 500px;
+	height: 500px;
 }
 footer {
 	text-align: center;

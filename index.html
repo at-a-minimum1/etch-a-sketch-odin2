@@ -14,11 +14,19 @@
 				<button class="clearBtn">Clear</button> <br />
 				<button class="colorBtn">Color</button> <br />
 				<button class="eraserBtn">Eraser</button><br />
-				Grid Size 
+				Grid Size
 				<!-- <div class="slider-value">slideContainer.value</div> -->
 				<br />
 				<div class="slider-container">
-					<input type="range" id="myRange" min="1" max="50" value="16" />
+					<input
+						type="range"
+						id="myRange"
+						min="1"
+						max="50"
+						value="16"
+						oninput="sliderFunction(this.value)"
+					/>
+					<p id="demo"></p>
 				</div>
 			</div>
 			<div class="display"></div>

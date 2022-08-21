@@ -17,11 +17,11 @@ function generateDisplay(size) {
 	}
 }
 generateDisplay(16);
-let range = document.getElementById("myRange").value;
-
+const rangeSlider = document.getElementById("myRange");
+let range = 0;
 let clearBtn = document.querySelector(".clearBtn");
 clearBtn.addEventListener("click", () => {
-	generateDisplay(32);
+	generateDisplay(16);
 	console.log(range);
 });
 let colorBtn = document.querySelector(".colorBtn");
@@ -34,3 +34,7 @@ eraserBtn.addEventListener("click", () => {
 });
 
 function chooseColor(color) {}
+
+function sliderFunction(val) {
+	document.getElementById("demo").innerHTML = val;
+}

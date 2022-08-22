@@ -1,5 +1,6 @@
 * {
 	background-color: darkgray;
+	/* background-color: ; */
 }
 nav {
 	display: flex;
@@ -28,6 +29,9 @@ h1 {
 	min-height: 400px;
 	font-size: larger;
 }
+.eraserBtn:focus {
+	background-color: darkred;
+}
 button {
 	font-size: large;
 	border-radius: 10%;
@@ -39,8 +43,10 @@ button {
 	display: grid;
 	width: 800px;
 	height: 800px;
+	border: solid;
+	/* border-radius: 5%; */
+	border-color: red;
 }
 footer {
 	text-align: center;
-	
 }

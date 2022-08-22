@@ -1,4 +1,6 @@
-let range = 0;
+let range = 16;
+let color = "black";
+let eraserState = false;
 
 function generateDisplay(size) {
 	let display = document.querySelector(".display");
@@ -11,17 +13,21 @@ function generateDisplay(size) {
 		let square = document.createElement("div");
 
 		square.addEventListener("mouseover", () => {
-			square.style.backgroundColor = "black";
+			if (eraserState) {
+				color = "lightgrey";
+			} else {
+				color = "black";
+			}
+			square.style.backgroundColor = color;
 		});
 		square.style.backgroundColor = "lightgrey";
 
 		display.insertAdjacentElement("beforeend", square);
 	}
 }
-generateDisplay(16);
-// const rangeSlider = document.getElementsByClassName("form-slider");
-// const range = rangeSlider.value;
-let clearBtn = document.querySelector(".clearBtn");
+generateDisplay(range);
+
+const clearBtn = document.querySelector(".clearBtn");
 clearBtn.addEventListener("click", () => {
 	generateDisplay(range);
 });
@@ -32,12 +38,19 @@ colorBtn.addEventListener("click", () => {
 let eraserBtn = document.querySelector(".eraserBtn");
 eraserBtn.addEventListener("click", () => {
 	console.log("This works");
+	if (!eraserState) {
+		eraserBtn.style.backgroundColor = "pink";
+		eraserBtn.style.color = "black";
+		eraserState = true;
+	} else {
+		eraserBtn.style.backgroundColor = "black";
+				eraserBtn.style.color = "white";
+		eraserState = false;
+	}
 });
 
-function chooseColor(color) {}
-
 function sliderFunction(slideNum) {
-	document.getElementById("demo").innerHTML = slideNum;
+	document.getElementById("demo").innerHTML = `${slideNum} x ${slideNum}`;
 	range = slideNum;
 	generateDisplay(slideNum);
 }

@@ -1,3 +1,5 @@
+let range = 0;
+
 function generateDisplay(size) {
 	let display = document.querySelector(".display");
 	display.style.gridTemplateColumns = `repeat(${size}, 1fr)`;
@@ -9,20 +11,19 @@ function generateDisplay(size) {
 		let square = document.createElement("div");
 
 		square.addEventListener("mouseover", () => {
-			square.style.backgroundColor = "blue";
+			square.style.backgroundColor = "black";
 		});
-		square.style.backgroundColor = "black";
+		square.style.backgroundColor = "lightgrey";
 
 		display.insertAdjacentElement("beforeend", square);
 	}
 }
 generateDisplay(16);
-const rangeSlider = document.getElementById("myRange");
-let range = 0;
+// const rangeSlider = document.getElementsByClassName("form-slider");
+// const range = rangeSlider.value;
 let clearBtn = document.querySelector(".clearBtn");
 clearBtn.addEventListener("click", () => {
-	generateDisplay(16);
-	console.log(range);
+	generateDisplay(range);
 });
 let colorBtn = document.querySelector(".colorBtn");
 colorBtn.addEventListener("click", () => {
@@ -35,6 +36,10 @@ eraserBtn.addEventListener("click", () => {
 
 function chooseColor(color) {}
 
-function sliderFunction(val) {
-	document.getElementById("demo").innerHTML = val;
+function sliderFunction(slideNum) {
+	document.getElementById("demo").innerHTML = slideNum;
+	range = slideNum;
+	generateDisplay(slideNum);
 }
+
+//TODO Figure out how to grab values from html and put them into javascript and vice versa

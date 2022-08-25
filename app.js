@@ -9,18 +9,20 @@ function generateDisplay(size) {
 	let squares = display.querySelectorAll("div");
 	squares.forEach((div) => div.remove());
 	let canvasSize = size * size;
+	document.getElementById("demo").innerHTML = `${size} x ${size}`;
+
 	for (let i = 0; i < canvasSize; i++) {
 		let square = document.createElement("div");
 
 		square.addEventListener("mouseover", () => {
 			if (eraserState) {
-				color = "lightgrey";
+				color = "#6A7F84";
 			} else {
 				color = "black";
 			}
 			square.style.backgroundColor = color;
 		});
-		square.style.backgroundColor = "lightgrey";
+		square.style.backgroundColor = "#6A7F84";
 
 		display.insertAdjacentElement("beforeend", square);
 	}
@@ -44,15 +46,13 @@ eraserBtn.addEventListener("click", () => {
 		eraserState = true;
 	} else {
 		eraserBtn.style.backgroundColor = "black";
-				eraserBtn.style.color = "white";
+		eraserBtn.style.color = "white";
 		eraserState = false;
 	}
 });
 
 function sliderFunction(slideNum) {
-	document.getElementById("demo").innerHTML = `${slideNum} x ${slideNum}`;
+	// document.getElementById("demo").innerHTML = `${slideNum} x ${slideNum}`;
 	range = slideNum;
 	generateDisplay(slideNum);
 }
-
-//TODO Figure out how to grab values from html and put them into javascript and vice versa

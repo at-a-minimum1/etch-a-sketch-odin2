@@ -1,14 +1,28 @@
 * {
-	background-color: darkgray;
+	background-color: #c1161e;
 	/* background-color: ; */
 }
 nav {
 	display: flex;
 	justify-content: flex-end;
 }
+.head-wrap {
+	display: flex;
+	flex-flow: row;
+	justify-content: center;
+	align-items: flex-end;
+}
 h1 {
 	text-align: center;
-	font-family: monospace;
+	font-family: "Pacifico";
+	color: rgb(198, 193, 30);
+	text-shadow: 0, 80px;
+}
+h2 {
+	text-align: center;
+	font-family: "Pacifico";
+	color: rgb(198, 193, 30);
+	text-shadow: 0, 80px;
 }
 .wrapper {
 	display: flex;
@@ -17,11 +31,12 @@ h1 {
 	justify-content: center;
 	align-items: center;
 	font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+	flex-flow: column;
 }
 .button-panel {
 	display: flex;
 	align-items: center;
-	flex-direction: column;
+	/* flex-direction: column; */
 	justify-content: center;
 	border: solid;
 	border-color: greenyellow;

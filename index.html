@@ -2,21 +2,32 @@
 <html lang="en">
 	<head>
 		<link rel="stylesheet" href="styles.css" />
+		<link
+			rel="stylesheet"
+			href="https://fonts.google.com/specimen/Pacifico?query=pacifico"
+		/>
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Etch-A-Sketch</title>
 	</head>
 	<body>
-		<h1>Etch-A-Sketch</h1>
+		<!-- font-family: "Pacifico", pacifico; -->
+		<div class="head-wrap">
+
+
+	<h2>MAGIC</h2>
+	<h1>Etch-A-Sketch</h1>
+	<h2>SCREEN</h2>
+
+
+
+		</div>
+	
 		<div class="wrapper">
+			<div class="display"></div>
 			<div class="button-panel">
-				<button class="clearBtn">Clear</button> <br />
-				<button class="colorBtn">Color</button> <br />
-				<button class="eraserBtn">Eraser</button><br />
 				Grid Size
-				<!-- <div class="slider-value">slideContainer.value</div> -->
-				<br />
 				<div class="slider-container">
 					<input
 						type="range"
@@ -29,8 +40,12 @@
 					/>
 					<p id="demo"></p>
 				</div>
+				<button class="clearBtn">Clear</button> <br />
+				<button class="eraserBtn">Eraser</button><br />
+				<button class="colorBtn">Color</button> <br />
+				<!-- <div class="slider-value">slideContainer.value</div> -->
+				<br />
 			</div>
-			<div class="display"></div>
 		</div>
 		<footer>Timbo -2022</footer>
 		<script src="app.js"></script>

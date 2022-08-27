@@ -1,4 +1,4 @@
-/* @colllapse */
+/* @collapse */
 let range = 16;
 let color = "black";
 let eraserState = false;
@@ -48,12 +48,10 @@ let colorBtn = document.querySelector(".colorBtn");
 colorBtn.addEventListener("click", () => {
 	if (!colorState) {
 		colorBtn.innerHTML = "On";
-		// colorBtn.style.backgroundColor = "grey";
 		colorBtn.style.color = "black";
 		colorState = true;
 	} else {
 		colorBtn.innerHTML = "Off";
-		// colorBtn.style.backgroundColor = "#D9D9D9";
 		colorBtn.style.color = "black";
 		colorState = false;
 	}
@@ -62,12 +60,10 @@ let eraserBtn = document.querySelector(".eraserBtn");
 eraserBtn.addEventListener("click", () => {
 	if (!eraserState) {
 		eraserBtn.innerHTML = "On";
-		// eraserBtn.style.backgroundColor = "#79090F";
 		eraserBtn.style.color = "black";
 		eraserState = true;
 	} else {
 		eraserBtn.innerHTML = "Off";
-		// eraserBtn.style.backgroundColor = "#D9D9D9";
 		eraserBtn.style.color = "black";
 		eraserState = false;
 	}
